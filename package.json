@@ -1,6 +1,6 @@
 {
   "name": "language-ejs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "description": "EJS support for Atom.",
   "repository": "https://github.com/darron/language-ejs",
@@ -8,6 +8,5 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
