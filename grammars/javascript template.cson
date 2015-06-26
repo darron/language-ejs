@@ -1,18 +1,37 @@
 'fileTypes': [
   'ejs'
 ]
+'name': 'JavaScript Template'
 'foldingStartMarker': '(?x)\n\t\t(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\\b.*?>\n\t\t|<!--(?!.*-->)\n\t\t|\\{\\s*($|\\?>\\s*$|//|/\\*(.*\\*/\\s*$|(?!.*?\\*/)))\n\t\t)'
 'foldingStopMarker': '(?x)\n\t\t(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)>\n\t\t|^\\s*-->\n\t\t|(^|\\s)\\}\n\t\t)'
-'name': 'JavaScript Template'
 'patterns': [
   {
-    'begin': '<%=?'
+    'begin': '<%#'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.begin.embedded.js'
+    'end': '%>'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.end.embedded.js'
+    'name': 'comment.block.embedded.js'
+  }
+  {
+    'begin': '<%(%=|==|=:|=|)?'
     'captures':
       '0':
         'name': 'punctuation.section.embedded.js'
     'end': '%>'
     'name': 'source.js.embedded.html'
     'patterns': [
+      {
+        'captures':
+          '1':
+            'name': 'keyword.control.include.embedded.js'
+          '2':
+            'name': 'string.file-path.embedded.js'
+        'match': '(include)\\s+(.+?)\\s+'
+      }
       {
         'include': 'source.js'
       }
