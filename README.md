@@ -9,4 +9,4 @@ Select "JavaScript Template" if it's not automatically working.
 
 ## Screenshot
 
-![screenshot](screenshot.png)
+![screenshot](https://github.com/darron/language-ejs/raw/master/screenshot.png)
