@@ -1,27 +1,27 @@
 'fileTypes': [
   'ejs'
 ]
-'name': 'JavaScript Template'
+'name': 'EJS'
 'foldingStartMarker': '(?x)\n\t\t(<(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)\\b.*?>\n\t\t|<!--(?!.*-->)\n\t\t|\\{\\s*($|\\?>\\s*$|//|/\\*(.*\\*/\\s*$|(?!.*?\\*/)))\n\t\t)'
 'foldingStopMarker': '(?x)\n\t\t(</(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl)>\n\t\t|^\\s*-->\n\t\t|(^|\\s)\\}\n\t\t)'
 'patterns': [
   {
-    'begin': '<%#'
+    'begin': '<(%|\\?)#'
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.comment.begin.embedded.js'
-    'end': '%>'
+    'end': '(%|\\?)>'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.comment.end.embedded.js'
     'name': 'comment.block.embedded.js'
   }
   {
-    'begin': '<%(%=|==|=:|=|)?'
+    'begin': '<(%|\\?)(%=|==|=:|=|)?'
     'captures':
       '0':
         'name': 'punctuation.section.embedded.js'
-    'end': '%>'
+    'end': '(%|\\?)>'
     'name': 'source.js.embedded.html'
     'patterns': [
       {
